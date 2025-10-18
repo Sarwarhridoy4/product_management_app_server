@@ -35,8 +35,8 @@ This is a Node.js + Express + TypeScript backend for managing **Users, Categorie
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/your-username/ecommerce-api.git
-cd ecommerce-api
+git clone https://github.com/Sarwarhridoy4/product_management_app_server.git
+cd product_management_app_server
 ```
 
 2. **Install dependencies**
