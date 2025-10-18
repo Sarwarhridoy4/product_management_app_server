@@ -33,7 +33,7 @@ app.use(
 );
 
 // Entry point for routes
-app.use("/api/v1", router);
+app.use("/", router);
 
 // Application Entry Point
 app.get("/", (_req: Request, res: Response) => {

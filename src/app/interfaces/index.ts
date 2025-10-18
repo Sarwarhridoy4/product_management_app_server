@@ -1,4 +1,4 @@
-import mongoose from "mongoose";
+import { Types } from "mongoose";
 
 export enum UserRole {
   USER = "USER",
@@ -6,10 +6,21 @@ export enum UserRole {
 }
 
 export interface IUser extends Document {
-  _id: mongoose.Types.ObjectId;
+  _id: Types.ObjectId;
   name?: string;
   email: string;
   role?: UserRole;
   createdAt: Date;
   updatedAt: Date;
+}
+
+export interface SignupPayload {
+  name: string;
+  email: string;
+  password: string;
+}
+
+export interface LoginPayload {
+  email: string;
+  password?: string;
 }

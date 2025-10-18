@@ -7,9 +7,9 @@ import { User } from "../models/user.model";
 import { IUser } from "../interfaces";
 
 // Generate access and refresh tokens
-export const createUserTokens = (user: IUser) => {
+export const createUserTokens = (user: Partial<IUser>) => {
   const jwtPayload = {
-    userId: user._id,
+    _id: user._id,
     email: user.email,
     role: user.role,
   };
