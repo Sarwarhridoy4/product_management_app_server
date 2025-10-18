@@ -2,6 +2,10 @@
 
 This is a Node.js + Express + TypeScript backend for managing **Users, Categories, and Products** with JWT-based authentication and full CRUD functionality.
 
+## 🔗 Live :
+
+> https://product-management-app-server.vercel.app
+
 ---
 
 ## Features
