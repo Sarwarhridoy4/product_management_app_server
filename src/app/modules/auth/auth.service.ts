@@ -1,5 +1,4 @@
 import { StatusCodes } from "http-status-codes";
-import bcrypt from "bcryptjs";
 import AppError from "../../helpers/appError";
 import { User } from "../../models/user.model";
 import { LoginPayload, SignupPayload } from "../../interfaces";
