@@ -1,23 +1,10 @@
 import { StatusCodes } from "http-status-codes";
 import AppError from "../../helpers/appError";
 import { QueryBuilder } from "../../utils/queryBuilders";
-import { ICategory } from "../../interfaces";
+import { CategoryPayload, CategoryQuery, ICategory } from "../../interfaces";
 import { Category } from "../../models/category.model";
 
-interface CategoryQuery {
-  page?: string;
-  limit?: string;
-  sort?: string;
-  fields?: string;
-  searchedText?: string;
-  offset?: string;
-}
 
-interface CategoryPayload {
-  name: string;
-  description?: string;
-  image?: string;
-}
 
 export const listCategoriesService = async (query: CategoryQuery) => {
   const builder = new QueryBuilder<ICategory>(

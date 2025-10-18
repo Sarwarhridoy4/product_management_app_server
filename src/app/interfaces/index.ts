@@ -43,9 +43,37 @@ export interface CategoryQuery {
   offset?: string;
 }
 
-
 export interface CategoryPayload {
   name: string;
   description?: string;
   image?: string;
+}
+
+export interface IProduct {
+  name: string;
+  description?: string;
+  images: string[];
+  price: number;
+  slug: string;
+  category: Types.ObjectId;
+  createdAt?: Date;
+  updatedAt?: Date;
+}
+
+export interface ProductQuery {
+  page?: string;
+  limit?: string;
+  offset?: string;
+  sort?: string;
+  fields?: string;
+  searchedText?: string;
+  categoryId?: string;
+}
+
+export interface ProductPayload {
+  name: string;
+  description?: string;
+  images?: string[];
+  price: number;
+  categoryId: string;
 }

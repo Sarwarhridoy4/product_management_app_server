@@ -3,9 +3,12 @@ import { catchAsync } from "../../utils/catchAsync";
 import { CategoryServices } from "./category.service";
 import { sendResponse } from "../../utils/sendResponse";
 import { StatusCodes } from "http-status-codes";
+import { CategoryQuery } from "../../interfaces";
 
 const listCategories = catchAsync(async (req: Request, res: Response) => {
-  const result = await CategoryServices.listCategoriesService(req.query);
+  const result = await CategoryServices.listCategoriesService(
+    req.query as CategoryQuery
+  );
   sendResponse(res, {
     success: true,
     statusCode: StatusCodes.OK,
